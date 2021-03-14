@@ -1,0 +1,14 @@
+.flavors {
+
+	&__carousel {
+		overflow: visible !important;
+		height: 50rem;
+		
+		img {
+			width: 80% !important;
+			height: auto;
+			max-height: 500px;
+			object-fit: cover;
+		}
+	}
+}

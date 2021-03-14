@@ -37,6 +37,13 @@
 		}		
 	}
 
+
+	&.scrolled {
+		.bar {
+			background-color: $dark-color;
+		}
+	}
+
 	// .bar {
 	// 	display: inline-block;
 	// 	width: 90%;

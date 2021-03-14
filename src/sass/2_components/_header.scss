@@ -1,10 +1,18 @@
 .header {
 	width: 100%;
-	padding: 2rem 0;
+	height: 10rem;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 2000;
+	@include flex;
+	transition: all $t-time $t-ease;
+
+	&.scrolled {
+		@include bg-color($white-color);
+		padding: 0;
+		height: 6rem;
+	}
 
 	&__container {
 		@include flex(center, space-between);
@@ -13,9 +21,14 @@
 	.logo {
 		position: relative;
 		z-index: 4;
-		transition: filter $t-time linear;
-		&.open {
+		transition: filter $t-time linear, transform $t-time $t-ease;
+		&.open,
+		&.scrolled {
 			filter: invert(1);
+		}
+
+		&.scrolled {
+			transform: scale(0.6);
 		}
 	}
 }
@@ -40,6 +53,11 @@
 
 	&.open {
 		transform: translateY(0);
+	}
+	&.scrolled {
+		.nav__link {
+			color: $dark-color;
+		}
 	}
 
 
@@ -91,6 +109,7 @@
 		color: $dark-color;
 		text-transform: capitalize;
 		padding: 0.5rem;
+
 		@include mq(900px) {
 			font-size: 1.6rem;
 			color: $text-color-white;

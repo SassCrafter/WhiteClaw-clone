@@ -40,7 +40,7 @@
 
 @mixin hover($color: $text-color-white) {
 	position: relative;
-	transition: opacity $t-time $t-ease;
+	transition: opacity $t-time $t-ease, color $t-time linear;
 
 	&::before {
 		content: '';

@@ -14,6 +14,14 @@ export const removeClasses = (els, classNames) => {
 	});
 }
 
+export const addClasses = (els, classNames) => {
+	els.forEach((el) => {
+		classNames.split(' ').forEach((className) => {
+			el.classList.add(className);
+		});
+	});
+}
+
 export const addClass = (el, className) => el.classList.add(className);
 
 export const removeClass = (el, className) => el.classList.remove(className);

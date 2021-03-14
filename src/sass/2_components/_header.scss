@@ -13,12 +13,68 @@
 	.logo {
 		position: relative;
 		z-index: 4;
+		transition: filter $t-time linear;
+		&.open {
+			filter: invert(1);
+		}
 	}
 }
 
 .nav {
+	width: 100%;
+	height: 100vh;
+	@include bg-color($white-color);
 	position: fixed;
 	top: 0;
 	left: 0;
 	transform: translateY(-100%);
+	transition: transform $t-time $t-ease;
+
+	&.open {
+		transform: translateY(0);
+	}
+
+
+	div {
+		width: 100%;
+		height: 100%;
+		@include flex;
+		flex-direction: column;
+	}
+
+	&__list {
+		@include flex;
+		flex-direction: column;
+		margin-bottom: 2rem;
+
+		&--social {
+			flex-direction: row;
+			margin-bottom: 0;
+
+			.nav__item {
+				margin: 0 .75rem;
+			}
+
+			.nav__link {
+				font-size: 4rem;
+			}
+		}
+	}
+
+	&__item {
+		margin: 0.25rem 0;
+	}
+
+	&__link {
+		display: inline-block;
+		font-size: 2.2rem;
+		font-weight: 700;
+		color: $dark-color;
+		text-transform: capitalize;
+		padding: 0.5rem;
+	}
+
+	// &__list {
+
+	// }
 }

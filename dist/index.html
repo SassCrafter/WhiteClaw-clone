@@ -10,7 +10,7 @@
 
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;900&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="./main.css">
 	<script src="./main.js" defer></script>
@@ -23,7 +23,8 @@
 				<img src="./images/logo.png" alt="White Claw">
 			</a>
 			<nav class="nav" role="navigation">
-				<ul class="nav__list nav__list--main">
+				<div>
+					<ul class="nav__list nav__list--main">
 					<li class="nav__item">
 						<a href="#" class="nav__link">Buy Now</a>
 					</li>
@@ -57,6 +58,7 @@
 						</a>
 					</li>
 				</ul>
+				</div>
 			</nav>
 			<div class="toggler">
 				<span class="bar bar--top"></span>
@@ -67,12 +69,23 @@
 	</header>
 	<!-- Header end -->
 
-	<!-- Hero start -->
-	<section class="section hero">
-		<div class="video">
-			<video src="./videos/waves.mp4" autoplay="true" muted></video>
-		</div>
-	</section>
-	<!-- Hero end -->
+	<main class="main">
+		<!-- Hero start -->
+		<section class="section hero">
+			<div class="video-overlay">
+				<video src="./videos/waves.mp4" autoplay loop playsinline muted></video>
+			</div>
+			<div class="overlay"></div>
+
+			<div class="container hero__container">
+				<div class="row js-slide-bot">
+					<div class="col">
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Hero end -->
+	</main>
 </body>
 </html>

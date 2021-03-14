@@ -38,50 +38,29 @@
 	background-position: center;
 }
 
-@mixin btn-hover($color: $primary-color) {
+@mixin hover($color: $text-color-white) {
 	position: relative;
-	overflow: hidden;
-
-	&::before,
-	&::after {
-		content: '';
-	    position: absolute;
-	    top: 50%;
-	    // z-index: -1;
-	    padding: 10px;
-	    border-radius: 50%;
-	    opacity: 1;
-	    transition: 0s;
-	    will-change: transform;
-	}
+	transition: opacity $t-time $t-ease;
 
 	&::before {
-		left: -30%;
-    	transform: translate(-50%, -50%);
-	}
-
-	&::after {
-		right: -30%;
-    	transform: translate(50%, -50%);
+		content: '';
+		width: 90%;
+		height: 2px;
+		background-color: $color;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 2rem);
+		opacity: 0;
+		transition: all $t-time $t-ease;
 	}
 
 	&:hover {
-		@include color($color);
-		transition: color .3s .5s;
-	}
+		opacity: 0.7;
 
-	&:hover::before,
-	&:hover::after {
-		padding: 50%;
-    	transition: left .4s, right .4s, padding .3s .5s, opacity .05s .75s;
-	}
-
-	&:hover::before {
-		left: 50%;
-		background-color: $color;
-	}
-	&:hover::after {
-		right: 50%;
-		background-color: $color;
+		&::before {
+			opacity: 1;
+			transform: translate(-50%, 0);
+		}
 	}
 }

@@ -30,6 +30,14 @@
 	transform: translateY(-100%);
 	transition: transform $t-time $t-ease;
 
+	@include mq(900px) {
+		position: static;
+		width: auto;
+		height: auto;
+		background-color: transparent;
+		transform: translateY(0);
+	}
+
 	&.open {
 		transform: translateY(0);
 	}
@@ -40,12 +48,20 @@
 		height: 100%;
 		@include flex;
 		flex-direction: column;
+		@include mq(900px) {
+			flex-direction: row;
+		}
 	}
 
 	&__list {
 		@include flex;
 		flex-direction: column;
 		margin-bottom: 2rem;
+
+		@include mq(900px) {
+			flex-direction: row;
+			margin-bottom: 0;
+		}
 
 		&--social {
 			flex-direction: row;
@@ -57,6 +73,9 @@
 
 			.nav__link {
 				font-size: 4rem;
+				@include mq(900px) {
+					font-size: 2.5rem;
+				}
 			}
 		}
 	}
@@ -72,6 +91,14 @@
 		color: $dark-color;
 		text-transform: capitalize;
 		padding: 0.5rem;
+		@include mq(900px) {
+			font-size: 1.6rem;
+			color: $text-color-white;
+			@include hover;
+			// &:hover {
+
+			// }
+		}
 	}
 
 	// &__list {

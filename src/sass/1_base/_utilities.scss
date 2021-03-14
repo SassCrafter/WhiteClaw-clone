@@ -2,7 +2,7 @@
 	width: 95%;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 2rem;
+	padding: 0 1rem;
 	overflow: hidden;
 }
 
@@ -43,4 +43,40 @@
 		height: 100%;
 		object-fit: cover;
 	}
+}
+
+// Hide
+
+.hide-md {
+	@include mq-max(900px) {
+		display: none !important;
+	}
+}
+
+.hide-pc-up {
+	@include mq(900px) {
+		display: none !important;
+	}
+}
+
+
+// .row {
+
+// }
+
+.col {
+	width: 100%;
+
+	@include mq(900px) {
+		width: 47%;
+	}
+}
+
+
+// Text
+.upper {
+	text-transform: uppercase;
+}
+.lower {
+	text-transform: lowercase;
 }

@@ -1,0 +1,25 @@
+.btn {
+	cursor: pointer;
+	display: inline-block;
+	border: 1px solid $text-color-white;
+	background-color: transparent;
+	color: $text-color-white;
+	padding: 1rem 2rem;
+	font-size: 1.6rem;
+	transition: background-color $t-time linear;
+
+	&:hover {
+		background-color: rgba(white, 0.5);
+	}
+
+	&--lg {
+		font-size: 2rem;
+		font-weight: 700;
+
+		@include mq(900px) {
+			padding: 1rem 5rem;
+		}
+	}
+
+
+}

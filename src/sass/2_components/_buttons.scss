@@ -4,9 +4,14 @@
 	border: 1px solid $text-color-white;
 	background-color: transparent;
 	color: $text-color-white;
+	margin-bottom: 2rem;
 	padding: 1rem 2rem;
 	font-size: 1.6rem;
 	transition: background-color $t-time linear;
+
+	@include mq(1200px) {
+		font-size: 1.8rem;
+	}
 
 	&:hover {
 		background-color: rgba(white, 0.5);
@@ -21,5 +26,25 @@
 		}
 	}
 
+	&--dark {
+		border: 1px solid darken($dark-color, 15%);
+		color: $dark-color;
+
+		&:hover {
+			@include bg-color($dark-color);
+		}
+	}
+
+	&--gray {
+		border: none;
+		@include bg-color($dark-gray-color);
+		color: $extra-dark-color;
+		font-weight: 600;
+
+		&:hover {
+			// background-color: rgba($dark-color, 0.8);
+			@include bg-color($dark-color);
+		}
+	}
 
 }

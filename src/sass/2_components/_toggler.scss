@@ -9,7 +9,7 @@
 	.bar {
 		display: inline-block;
 		width: 90%;
-		height: 5px;
+		height: 4px;
 		background-color: $white-color;
 		transition: all $t-time $t-ease;
 
@@ -32,7 +32,7 @@
 			}
 			&--bot {
 				transform: rotate(45deg);
-				margin-top: -5px;
+				margin-top: -4px;
 			}
 		}		
 	}

@@ -1,0 +1,53 @@
+.carousel {
+    width: 100%;
+    height: auto;
+
+    &__content {
+        margin-top: 2rem;
+        @include flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        h4 {
+            font-size: 2.4rem;
+            text-transform: uppercase;
+            color: $extra-dark-color;
+
+            @include mq(768px) {
+                font-size: 2.6rem;
+            }
+            @include mq(900px) {
+                font-size: 2.8rem;
+                margin-bottom: 3rem;
+            }
+            @include mq(1200px) {
+                font-size: 4rem;
+            }
+        }
+    }
+
+    &__action {
+        .btn {
+            font-weight: 600;
+        }
+        @include mq(900px) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__learn-more {
+        a {
+
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: underline;
+            color: inherit;
+            transition: opacity $t-time linear;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+}

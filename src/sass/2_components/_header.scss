@@ -8,10 +8,18 @@
 	@include flex;
 	transition: all $t-time $t-ease;
 
+	@include mq(1200px) {
+		height: 16rem;
+	}
+
 	&.scrolled {
+		box-shadow: 0 2px 5px rgba(black, 0.15);
 		@include bg-color($white-color);
-		padding: 0;
 		height: 6rem;
+
+		@include mq(1200px) {
+			height: 9rem;
+		}
 	}
 
 	&__container {
@@ -100,6 +108,10 @@
 
 	&__item {
 		margin: 0.25rem 0;
+
+		@include mq(1200px) {
+			margin: 0 1rem;
+		}
 	}
 
 	&__link {
@@ -117,6 +129,10 @@
 			// &:hover {
 
 			// }
+		}
+
+		@include mq(1200px) {
+			font-size: 2rem;
 		}
 	}
 

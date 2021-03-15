@@ -1,6 +1,6 @@
 .container {
-	width: 95%;
-	max-width: 1200px;
+	width: 100%;
+	max-width: 1800px;
 	margin: 0 auto;
 	padding: 0 1rem;
 	overflow: hidden;
@@ -9,6 +9,10 @@
 .section {
 	overflow: hidden;
 	padding: 5rem 0;
+
+	&--p-sm {
+		padding: 3rem 0;
+	}
 }
 
 .main {
@@ -18,6 +22,10 @@
 
 .logo {
 	width: 8rem;
+
+	@include mq(1200px) {
+		width: 12rem;
+	}
 }
 
 // Overlays
@@ -28,7 +36,7 @@
 	top: 0;
 	left: 0;
 	background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0, rgba(8,8,8,0.14) 54%, rgba(14,14,14,0.1) 100%);
-	opacity: 0.2;
+	opacity: 0.4;
 }
 
 .video-overlay {
@@ -61,9 +69,25 @@
 }
 
 
-// .row {
+.row {
+	@include flex(space-between, flex-start);
+	flex-direction: column;
 
-// }
+	@include mq(900px) {
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	&--full {
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: space-between;;
+		.col {
+			width: 45%;
+		}
+	}
+}
 
 .col {
 	width: 100%;
@@ -71,6 +95,19 @@
 	@include mq(900px) {
 		width: 47%;
 	}
+}
+
+
+.border-left {
+	border-left: 1px solid black;
+}
+.border-right {
+	border-right: 1px solid black;
+}
+
+// BG
+.bg-gray {
+	@include bg-color($gray-color);
 }
 
 
@@ -83,13 +120,64 @@
 }
 .text-center {
 	text-align: center;
-	margin-bottom: 2rem
+	margin: 0 auto 2rem auto;
+	max-width: 80rem;
+}
+
+.text-white {
+	color: $text-color-white;
+}
+
+.large {
+	font-size: 3.5rem;
 }
 
 .heading {
 	font-size: 2.8rem;
+	text-transform: uppercase;
+}
+
+.lead {
+	font-size: 1.6rem;
+	font-weight: 600;
 }
 
 .subheading {
-	font-size: 1.7rem;
+	font-size: 1.4rem;
+}
+
+
+@include mq(900px) {
+	.text-center {
+		margin: 0 auto 4rem auto;
+	}
+	.large {
+		font-size: 4.5rem
+	}
+	.heading {
+		font-size: 3.2rem;
+	}
+	.lead {
+		font-size: 1.8rem;
+	}
+}
+
+@include mq(1200px) {
+	.text-center {
+		margin: 0 auto 6rem auto;
+	}
+	.large {
+		font-size: 6rem;
+	}
+	.heading {
+		font-size: 4rem;
+		margin-bottom: 3rem;
+		letter-spacing: 2px;
+	}
+	.subheading {
+		font-size: 1.6rem;
+	}
+	.lead {
+		font-size: 1.8rem
+	}
 }

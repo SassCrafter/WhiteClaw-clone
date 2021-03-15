@@ -1,14 +1,32 @@
 .flavors {
 
+	.text {
+		@include mq(1200px) {
+			margin-bottom: 1rem;
+		}
+	}
 	&__carousel {
 		overflow: visible !important;
 		height: 50rem;
+
+		@include mq(1200px) {
+			height: 65rem;
+		}
 		
 		img {
-			width: 80% !important;
+			width: 50% ;
+			max-width: 30rem;
 			height: auto;
 			max-height: 500px;
 			object-fit: cover;
+
+			@include mq(1200px) {
+				width: 70%;
+			}
 		}
+	}
+
+	.swiper-slide:not(.swiper-slide-active) {
+		cursor: pointer;
 	}
 }

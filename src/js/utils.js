@@ -55,3 +55,7 @@ export function setSectionElsTranslate(parent = document){
 		// el.style.opacity = 0;
 	});
 }
+
+export function setTextContent(el, text) {
+	el.textContent = text;
+}

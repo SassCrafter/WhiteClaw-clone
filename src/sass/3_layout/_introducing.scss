@@ -1,0 +1,51 @@
+.introducing {
+    padding-bottom: 0;
+    position: relative;
+    @include bg-image("../../dist/images/sections/introducing/white-claw-wave-static.jpg");
+
+    &__content {
+        // justify-content: center;
+        position: relative;
+        z-index: 2;
+        
+        @include mq(1200px) {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    .text-center {
+        p {
+            max-width: 50rem;
+        }
+        .btn {
+            margin-top: 2rem;
+        }
+    }
+
+    &__top {
+        @include flex;
+        flex-direction: column;
+
+        @include mq(900px) {
+            align-self: center;
+        }
+        img {
+            width: 80%;
+            max-width: 40rem;
+        }
+    }
+
+    .img {
+        @include flex;
+        margin-bottom: 2rem;
+    }
+
+    &__image  {
+        @include flex(flex-end);
+        img {
+            width: 80%;
+            max-width: 50rem;
+        }
+    }
+}

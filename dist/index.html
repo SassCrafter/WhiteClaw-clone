@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>White Claw® Hard Seltzer | Made Pure®</title>
 
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="./favicon-32x32.png" type="image/x-icon">
+
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
@@ -128,52 +131,52 @@
 				<div class="flavors__carousel">
 					<div class="swiper-container flavors__swiper">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide swiper-slide-1">
+							<div class="swiper-slide swiper-slide-1" data-idx="0" data-flavor="black-cherry">
 								<div class="swiper-zoom-container">
 									<img src="./images/sections/flavors/black-cherry.png" alt="">
 								</div>
 							</div>
-							<div class="swiper-slide swiper-slide-2">
+							<div class="swiper-slide swiper-slide-2" data-idx="1" data-flavor="mango">
 								<div class="swiper-zoom-container">
 									<img src="./images/sections/flavors/mango.png" alt="">
 								</div>
 							</div>
-							<div class="swiper-slide swiper-slide-3">
+							<div class="swiper-slide swiper-slide-3" data-idx="2" data-flavor="natural lime">
 								<div class="swiper-zoom-container">
 									<img src="./images/sections/flavors/natural-lime.png" alt="">
 								</div>
 							</div>
-							<div class="swiper-slide swiper-slide-4">
+							<div class="swiper-slide swiper-slide-4" data-idx="3" data-flavor="grapefruit">
 								<div class="swiper-zoom-container">
 									<img src="./images/sections/flavors/grapefruit.png" alt="">
 								</div>
 							</div>
-							<div class="swiper-slide swiper-slide-5">
+							<div class="swiper-slide swiper-slide-5" data-idx="4" data-flavor="raspberry">
 								<div class="swiper-zoom-container">
 									<img src="./images/sections/flavors/raspberry.png" alt="">
 								</div>
 							</div>
-							<div class="swiper-slide swiper-slide-6">
+							<div class="swiper-slide swiper-slide-6" data-idx="5" data-flavor="lemon">
 								<div class="swiper-zoom-container">
 									<img src="./images/sections/flavors/lemon.png" alt="">
 								</div>
 							</div>
-							<div class="swiper-slide swiper-slide-7">
+							<div class="swiper-slide swiper-slide-7" data-idx="6" data-flavor="watermelon">
 								<div class="swiper-zoom-container">
 									<img src="./images/sections/flavors/watermelon.png" alt="">
 								</div>
 							</div>
-							<div class="swiper-slide swiper-slide-8">
+							<div class="swiper-slide swiper-slide-8" data-idx="7" data-flavor="tangerine">
 								<div class="swiper-zoom-container">
 									<img src="./images/sections/flavors/tangerine.png" alt="">
 								</div>
 							</div>
-							<div class="swiper-slide swiper-slide-9">
+							<div class="swiper-slide swiper-slide-9" data-idx="8" data-flavor="pineapple">
 								<div class="swiper-zoom-container">
 									<img src="./images/sections/flavors/pineapple.png" alt="">
 								</div>
 							</div>
-							<div class="swiper-slide swiper-slide-5">
+							<div class="swiper-slide swiper-slide-10" data-idx="9" data-flavor="clementine">
 								<div class="swiper-zoom-container">
 									<img src="./images/sections/flavors/clementine.png" alt="">
 								</div>
@@ -183,9 +186,86 @@
 						<div class="swiper-button-next"></div>
 					</div>
 				</div>
+				<div class="carousel__content">
+					<div class="carousel__label">
+						<h4 class="flavor-label"></h4>
+					</div>
+					<div class="carousel__action">
+						<a href="#" class="btn btn--dark btn--lg">Learn More</a>
+					</div>
+					<div class="carousel__learn-more">
+						<a href="#" class="underline upper">see all products</a>
+					</div>
+				</div>
+				<!-- Carousel end -->
 			</div>
 		</section>
 		<!-- Flavors end -->
+
+		<!-- Flavor-picker start -->
+		<section class="section section--p-sm flavor-finder bg-gray">
+			<div class="container">
+				<div class="row flavor-finder__content">
+					<div class="col">
+						<div class="text-center">
+							<h3 class="heading">Find White Claw</h3>
+						</div>
+					</div>
+					<div class="col flavor-finder__container">
+						<div class="row row--full">
+							<div class="col border-left">
+								<form class="flavor-finder__form" >                                  
+									<select class="flavor-finder__select">
+									  <option value="">Any Flavor</option>
+									  <option value="black-cherry">Black Cherry</option>
+									  <option value="mango">Mango</option>
+									  <option value="lime">Natural Lime</option>
+									  <option value="raspberry">Raspberry</option>
+									  <option value="grapefruit">Ruby Grapefruit</option>
+									  <option value="watermelon">Watermelon</option>
+									  <option value="lemon">Lemon</option>
+									  <option value="tangerine">Tangerine</option>
+									  <option value="variety-no1">Variety Pack No. 1</option>
+									  <option value="variety-no2">Variety Pack No. 2</option>
+									  <option value="70-clementine">Clementine</option>
+									  <option value="70-pineapple">Pineapple</option>
+									</select>                                          
+								  </form>
+							</div>
+				
+							<div class="col submit border-left">
+								<a href="#" class="btn btn--gray">Search</a>
+							</div>
+						  </div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Flavor-picker end -->
+
+		<!-- Introducing start -->
+		<section class="section introducing text-white">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row introducing__content">
+					<div class="col introducing__top">
+						<div class="img">
+							<img src="./images/sections/introducing/introducing-orange.png" alt="Introducing">
+						</div>
+						<div class="text-center">
+							<h2 class="large">WHITE CLAW®<br>HARD SELTZER 70</h2>
+							<p class="lead">Crafted with quality ingredients, White Claw® Hard Seltzer 70 is made from a blend of seltzer water, our gluten-free alcohol base, and a hint of fruit flavor.</p>
+							<p class="lead">Available in Pineapple and Clementine — two brand new, mouth-watering flavors — it has 70 calories, 3.7% alcohol, 0g carbs and is naturally gluten free.</p>
+							<a href="#" class="btn btn--lg">Buy Now</a>
+						</div>
+					</div>
+					<div class="col introducing__image">
+						<img src="./images/sections/introducing/introducing-whiteclaw-70.png" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Introducing end -->
 	</main>
 </body>
 </html>

@@ -1,8 +1,9 @@
 .footer {
+    padding-top: 5rem;
     padding-bottom: 5rem;
-    @include mq(900px) {
-        padding-top: 5rem;
-    }
+    // @include mq(900px) {
+    //     padding-top: 5rem;
+    // }
     @include mq(1200px) {
         padding-top: 10rem;
     }

@@ -33,6 +33,7 @@
     "@barba/core": "^2.9.7",
     "@barba/prefetch": "^2.1.10",
     "animejs": "^3.2.1",
+    "aos": "^2.3.4",
     "fslightbox": "^3.2.3",
     "locomotive-scroll": "^4.1.0",
     "swiper": "^6.4.15"

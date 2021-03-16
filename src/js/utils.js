@@ -26,6 +26,8 @@ export const addClass = (el, className) => el.classList.add(className);
 
 export const removeClass = (el, className) => el.classList.remove(className);
 
+export const toggleClass = (el, className) => el.classList.toggle(className);
+
 export function scaleValue(value, from, to) {
 	const scale = (to[1] - to[0]) / (from[1] - from[0]);
 	const capped = Math.min(from[1], Math.max(from[0], value)) - from[0];

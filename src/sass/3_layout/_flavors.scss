@@ -9,6 +9,10 @@
 		overflow: visible !important;
 		height: 50rem;
 
+		@include mq(768px) {
+			height: 40rem;
+		}
+
 		@include mq(1200px) {
 			height: 65rem;
 		}
@@ -20,10 +24,18 @@
 			max-height: 500px;
 			object-fit: cover;
 
+			@include mq(900px) {
+				width: 90%;
+			}
+
 			@include mq(1200px) {
 				width: 70%;
 			}
 		}
+	}
+
+	.swiperslide {
+		height: 90% !important;
 	}
 
 	.swiper-slide:not(.swiper-slide-active) {

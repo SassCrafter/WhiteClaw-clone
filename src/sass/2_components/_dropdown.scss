@@ -3,7 +3,14 @@
     cursor: pointer;
     position: relative;
 
+    &.open {
+        .dropdown__menu {
+            height: auto;
+        }
+    }
+
     &__toggle {
+        margin: 0;
         span {
             text-transform: uppercase;
         }
@@ -18,10 +25,18 @@
         width: 100%;
         position: absolute;
         bottom: calc(100% + 2rem);
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        background-color: $dark-color;
+        left: 0;
+        text-align: left;
+        transition: height $t-time $t-ease;
+        height: 0;
+        overflow: hidden;
+        @include bg-color($dark-color);
+
+
+        li {
+            font-size: 1.4rem;
+            padding: 0.75rem 1rem;
+        }
     }
 
     // Region dropdown
@@ -38,6 +53,35 @@
             padding-left: 5rem;
             padding-right: 1rem;
             border-radius: 5px;
+        }
+
+        .dropdown__menu li {
+            background-size: 3rem;
+            background-repeat: no-repeat;
+            background-position: 1rem center;
+            padding-left: 5rem;
+
+            &.us {
+                background-image: url('../../dist/images/flags/usa-flag.jpg');
+            }
+            &.ca {
+                background-image: url('../../dist/images/flags/canada.svg');
+            }
+            &.uk {
+                background-image: url('../../dist/images/flags/uk-flag.png');
+            }
+            &.ie {
+                background-image: url('../../dist/images/flags/ireland-flag.png');
+            }
+            &.nl {
+                background-image: url('../../dist/images/flags/netherlands-flag.svg');
+            }
+            &.au {
+                background-image: url('../../dist/images/flags/au-flag.png');
+            }
+            &.be {
+                background-image: url('../../dist/images/flags/belgium-flag.svg');
+            }
         }
     }
 }

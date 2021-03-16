@@ -1,0 +1,73 @@
+.footer {
+    @include mq(900px) {
+        padding-top: 5rem;
+    }
+    @include mq(1200px) {
+        padding-top: 10rem;
+    }
+    &__content {
+        width: 100%;
+        @include flex;
+        flex-direction: column;
+    }
+
+    &__logo {
+        width: 10rem;
+        margin-bottom: 4rem;
+        @include flex;
+
+        @include mq(900px) {
+            width: 12rem;
+        }
+        @include mq(1200px) {
+            width: 14rem;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .text-center {
+        margin-bottom: 2rem;
+
+        @include mq(900px) {
+            margin-bottom: 3rem;
+        }
+    }
+    
+    &__heading {
+        font-size: 2.2rem;
+        margin-bottom: 0;
+
+        @include mq(900px) {
+            font-size: 3.5rem;
+        }
+    }
+
+    .subscription-form {
+        max-width: 40rem;
+        margin-bottom: 2rem;
+    }
+
+    &__nav {
+        .nav__link {
+            color: $text-color-white !important;
+            @include mq(1200px){ 
+                font-size: 2.5rem;
+            }
+        }
+
+        .nav__list {
+            margin-bottom: 1rem;
+        }
+
+        .nav__list--social .nav__link {
+            font-size: 2.5rem;
+
+            i {
+                font-size: 1em;
+            }
+        }
+    }
+}

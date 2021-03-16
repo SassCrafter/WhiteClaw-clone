@@ -1,0 +1,43 @@
+.dropdown {
+    width: auto;
+    cursor: pointer;
+    position: relative;
+
+    &__toggle {
+        span {
+            text-transform: uppercase;
+        }
+
+        i {
+            display: inline-block;
+            margin-left: 1rem;
+        }
+    }
+    
+    &__menu {
+        width: 100%;
+        position: absolute;
+        bottom: calc(100% + 2rem);
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        background-color: $dark-color;
+    }
+
+    // Region dropdown
+
+    &--region {
+
+        .dropdown__toggle {
+            outline: none;
+            background-color: transparent;
+            background-image: url('../../dist/images/flags/usa-flag.jpg');
+            background-repeat: no-repeat;
+            background-size: 3rem;
+            background-position: 1rem center;
+            padding-left: 5rem;
+            padding-right: 1rem;
+            border-radius: 5px;
+        }
+    }
+}

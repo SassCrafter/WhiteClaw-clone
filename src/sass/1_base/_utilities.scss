@@ -87,6 +87,17 @@
 			width: 45%;
 		}
 	}
+
+	&--width {
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: center;
+
+		.col {
+			width: 100% !important;
+			@include flex(flex-start);
+		}
+	}
 }
 
 .col {
@@ -109,6 +120,9 @@
 .bg-gray {
 	@include bg-color($gray-color);
 }
+.bg-black {
+	@include bg-color($black-color);
+}
 
 
 // Text
@@ -121,11 +135,15 @@
 .text-center {
 	text-align: center;
 	margin: 0 auto 2rem auto;
+	width: 100%;
 	max-width: 80rem;
 }
 
 .text-white {
 	color: $text-color-white;
+}
+.text-black {
+	color: $extra-dark-color;
 }
 
 .large {

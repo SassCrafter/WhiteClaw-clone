@@ -17,6 +17,10 @@
 		@include bg-color($white-color);
 		height: 6rem;
 
+		.nav__link::before {
+			background: $dark-color;
+		}
+
 		@include mq(1200px) {
 			height: 9rem;
 		}

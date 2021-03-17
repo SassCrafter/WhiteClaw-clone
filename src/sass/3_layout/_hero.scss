@@ -20,11 +20,13 @@
 		}
 	}
 
-	.col {
+	&__tagline {
 		@include flex();
 		flex-direction: column;
+		@include mq(900px) {
+			margin-right: 4rem;
+		}
 	}
-
 	&__tagline img {
 		margin-bottom: 2rem;
 	}
@@ -35,9 +37,17 @@
 
 		@include mq(900px) {
 			// flex: 1;
+			// flex: none;
+			width: 100%;
+			flex-direction: row;
 
 			.col {
-				margin: 0 8rem;
+				// margin: 0 8rem;
+				flex: auto;
+
+				@include mq(900px) {
+					width: 48%;
+				}
 			}
 			.cans img {
 				width: 80%;
@@ -49,7 +59,7 @@
 		@include mq(1200px) {
 			.cans img {
 				width: 100%;
-				max-width: 80rem;
+				max-width: 70rem;
 			}
 		}
 
@@ -120,6 +130,7 @@
 	&__buy {
 		width: 100%;
 		flex: 1;
+		@include flex;
 	}
 
 	.btn {

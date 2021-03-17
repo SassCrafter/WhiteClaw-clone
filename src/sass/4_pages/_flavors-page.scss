@@ -1,0 +1,52 @@
+.flavors-hero .page-hero__bg {
+    @include bg-image('../../dist/images/banners/flavors.png');
+}
+
+.flavors-page {
+    .col {
+        margin-bottom: 2rem;
+    }
+
+    &__img {
+        margin-bottom: 2rem;
+    }
+
+    h5 {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        color: $black-color;
+
+        @include mq(900px) {
+            font-size: 1.8rem;
+        }
+        @include mq(1200px) {
+            font-size: 2rem;
+        }
+    }
+}
+
+.flavor-item {
+    transition: background-color $t-time linear;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($gray-color, 15%);
+    }
+}
+
+.flavor-packs {
+    .col {
+        flex: none;
+        width: 100%;
+        @include flex;
+        flex-direction: column;
+
+        @include mq(768px){ 
+            width: 45%;
+        }
+
+        h5 {
+            margin-bottom: 1rem;
+        }
+    }
+}

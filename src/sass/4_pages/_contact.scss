@@ -1,0 +1,77 @@
+.contact-hero .page-hero__bg {
+	@include bg-image('../../dist/images/banners/contact.png');
+}
+
+.form--contact {
+    input:not([type="checkbox"]),
+    textarea,
+    select {
+        background-color: transparent;
+        border: 3px solid $extra-dark-color;
+        color: $extra-dark-color;
+        border-radius: .5rem;
+        transition: box-shadow 200ms linear;
+
+        &:focus,
+        &:hover {
+            outline: none;
+            border-radius: .5rem;
+            box-shadow: 0 3px 5px rgba(black, 0.2);
+        }
+        &:focus {
+            box-shadow: 0 5px 5px rgba(black, 0.2);
+        }
+
+        &::placeholder {
+            color: inherit;
+        }
+    }
+
+    select,
+    textarea {
+        display: inline-block;
+        width: 100%;
+        padding: 1rem;
+        font-size: 2rem;
+    }
+
+    .row {
+        @include mq(768px) {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        &--triple {
+            .col {
+                @include mq(768px) {
+                    flex: 0 1 33%;
+                }
+            }
+        }
+    }
+
+    .col {
+        @include mq(768px) {
+            flex: 0 1 49%;
+        }
+    }
+
+    .signup {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        input {
+            width: auto;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+    }
+
+    .submit {
+        @include flex(flex-end, flex-end);
+        button {
+            width: auto;
+        }
+    }
+}

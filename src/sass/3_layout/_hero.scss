@@ -46,22 +46,26 @@
 				flex: auto;
 
 				@include mq(900px) {
+					width: 44%;
+				}
+				@include mq(1200px) {
 					width: 48%;
 				}
 			}
-			.cans img {
-				width: 80%;
-				display: block;
-				margin: 0 auto;
-			}
 		}
 
-		@include mq(1200px) {
-			.cans img {
+		.cans img  {
+			width: 80% !important;
+			max-width: 40rem !important;
+			display: block;
+			margin: 0 auto;
+
+			@include mq(1200px) {
 				width: 100%;
 				max-width: 70rem;
 			}
 		}
+
 
 		.made-pure {
 			margin-bottom: 2rem;
@@ -76,18 +80,19 @@
 
 
 	&__details {
-		flex: 1;
+		flex: auto;
 		width: 100%;
 		max-width: 120rem;
 		padding-bottom: 1rem;
-		@include flex();
+		@include flex;
 
-		@include mq(1200px) {
+		@include mq(900px) {
 			padding-bottom: 0;
 		}
 
 		.col {
 			width: 100% !important;
+			@include flex();
 		}
 
 		ul {
